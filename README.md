@@ -1,6 +1,6 @@
 # Superconducting-qubit simulations
 
-Two notebooks on modelling capacitively coupled transmons and driving a cross-resonance gate. I use these models to connect qubit frequencies and coupling rates with pulse behaviour and approximate layout targets.
+Simulations of transmon spectroscopy, pulse dynamics and cross-resonance gates. I use these models to connect qubit frequencies and coupling rates with pulse behaviour and approximate layout targets.
 
 ## Start here
 
@@ -8,6 +8,7 @@ Two notebooks on modelling capacitively coupled transmons and driving a cross-re
 | --- | --- |
 | [QuTiP-only CR/ECR workflow](notebooks/ECR_gate_qutip_simulation.ipynb) | Static spectrum, ZZ, CR rates, lab-frame checks, pulse calibration, leakage and ECR design-space scan |
 | [Original scqubits + QuTiP tutorial](CR_gate_scqubits_qutip_tutorial_1.ipynb) | Transmon spectra, coupled Hamiltonian and a lab-frame CR pulse example |
+| [Qubit spectroscopy](notebooks/qubit_spectroscopy.ipynb) | Four-level transmon spectroscopy, Rabi oscillations and frequency-duration chevrons |
 
 The first notebook is the more complete design study. The original tutorial is retained at its existing path. Its last example uses a different parameter set from its opening design point; read each section’s parameters before comparing results.
 
@@ -40,7 +41,7 @@ The ECR workflow was rerun with the versions recorded in [VALIDATION.md](VALIDAT
 - Track leakage and inspect all four computational inputs.
 - Distinguish ECR truth tables from the locally converted CNOT check.
 
-The pulse model omits DRAG, rotary tones, drive crosstalk, readout resonators, thermal populations and detailed TLS/flux-noise models. Coupling capacitance exported for layout is an estimate requiring EM verification. No fabrication or experimental benchmark is claimed.
+The CR/ECR pulse model omits DRAG, rotary tones, drive crosstalk, readout resonators, thermal populations and detailed TLS/flux-noise models. Coupling capacitance exported for layout is an estimate requiring EM verification. No fabrication or experimental benchmark is claimed.
 
 [Project explanation](https://mukul-quantum-researcher.github.io/projects/cr-ecr/) · [Portfolio](https://mukul-quantum-researcher.github.io)
 
