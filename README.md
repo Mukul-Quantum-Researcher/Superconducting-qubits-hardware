@@ -1,4 +1,4 @@
-# Cross-resonance and echoed CR gate simulations
+# Superconducting-qubit simulations
 
 Two notebooks on modelling capacitively coupled transmons and driving a cross-resonance gate. I use these models to connect qubit frequencies and coupling rates with pulse behaviour and approximate layout targets.
 
@@ -43,3 +43,11 @@ The ECR workflow was rerun with the versions recorded in [VALIDATION.md](VALIDAT
 The pulse model omits DRAG, rotary tones, drive crosstalk, readout resonators, thermal populations and detailed TLS/flux-noise models. Coupling capacitance exported for layout is an estimate requiring EM verification. No fabrication or experimental benchmark is claimed.
 
 [Project explanation](https://mukul-quantum-researcher.github.io/projects/cr-ecr/) · [Portfolio](https://mukul-quantum-researcher.github.io)
+
+## Qubit spectroscopy and Rabi chevrons
+
+[qubit_spectroscopy.ipynb](notebooks/qubit_spectroscopy.ipynb) contains a four-level QuTiP transmon model, Lindblad dynamics, quasi-static Gaussian frequency sampling, spectroscopy sweeps and Rabi chevrons. All results are simulations; the voltage-to-drive scale is assumed.
+
+Run `python scripts/analyse_spectroscopy.py` to reanalyse the saved populations without rerunning the trajectory simulations. The script exports the recorded chevron data, refits the supplied chevron model and computes a Rabi fit using several starting points. It verifies recovery of the example's transition and drive scale, and labels its plots as simulated data.
+
+The supplied coarse Lorentzian fit is under-resolved and has an unused phase argument. Its linewidth and uncertainty are not reliable. The saved Rabi fit output is inconsistent with its recorded oscillations; the separate analysis gives about 5 MHz, consistent with the chevron. Quasi-static Gaussian noise is not a full 1/f-noise model. See [the numerical analysis](results/spectroscopy-analysis.json) and [project page](https://mukul-quantum-researcher.github.io/projects/qubit-spectroscopy/).

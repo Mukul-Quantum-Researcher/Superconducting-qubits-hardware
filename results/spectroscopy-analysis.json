@@ -1,0 +1,21 @@
+{
+  "scope": "Fits recomputed from recorded simulation output; no new trajectory integration.",
+  "chevron_points": 180,
+  "chevron_fit": {
+    "f01_MHz": 5011.02646980895,
+    "fRabi_MHz": 5.0003247447282115,
+    "baseline": 0.0016182455512897466,
+    "contrast": 0.987530208600371,
+    "phase_t": 0.011675067799867354
+  },
+  "chevron_rmse": 0.006301608641435585,
+  "rabi_points": 33,
+  "rabi_refit_frequency_MHz": 4.998547168491662,
+  "rabi_rmse": 0.001897846716355119,
+  "limits": [
+    "The coarse 10 MHz Lorentzian fit is under-resolved and its phase argument is unused.",
+    "The original Rabi fit output is inconsistent with the recorded oscillations; the separate refit uses multiple starting points.",
+    "Quasi-static Gaussian offsets are not a full 1/f noise spectrum.",
+    "The voltage-to-drive conversion is assumed, not an experimental calibration."
+  ]
+}
